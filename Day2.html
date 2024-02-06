@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function()
+    {
+       /* $("p").hover(function()
+        {
+            $("p").css("color","red");
+        },function()
+        {
+            $("p").css("color","black");
+        })*/
+
+
+        $("p").hover(function(){
+            $("p").css("color","black");
+        },function(){
+            $("p").css("color","red");
+        });
+
+
+        $("p").click(function()
+        {
+            alert("You have clicked");
+        })
+
+        $("#first").val("Ankit"); // to set the value in the element
+
+        $("#btn-clicked").click(function()
+        {
+           
+            $("#first").val(); // to get the element value,used a val()
+         
+        })
+
+    })
+
+   prompt("Enter")
+
+
+</script>
+<body>
+    <p>Hello</p>
+    <input type="text" id="first"/>
+    <input type="button" id="btn-clicked"  value="click"/>
+
+
+</body>
+</html>
