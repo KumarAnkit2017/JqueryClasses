@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function()
+    {
+        $("*").css('color',"red") //universal selectors
+
+        // $("span").css('color',"yellow")
+
+
+       /* $("#hId,#sId").each(function()
+        {
+            $(this).css('color',"yellow") //id multiple selectors
+        })*/
+        
+        $("h1,span").css('color',"yellow") //tag multiple selectors
+        
+        $("h1").text("Aishu and Shubhi"); // set of text
+
+        $("p:even").css("color","green"); //sequences property of selectors(first,odd,even)
+
+    })
+</script>
+<body>
+    <p>Hello P1 Tag</p>
+    <h1 id="hId">Hello h1 Tag</h1>
+    <span id="sId">Hello span Tag</span>
+
+
+    <p>Hello P2 Tag</p>
+
+    <p>Hello P3 Tag</p>
+
+    <p>Hello P4 Tag</p>
+
+    <p>Hello P5 Tag</p>
+
+    <p>Hello P6 Tag</p>
+
+</body>
+</html>
