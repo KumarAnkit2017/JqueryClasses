@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<script>
+    
+    $(document).ready(function()
+    {
+        //1. length() or size()
+       //alert($("p").length); // it count the total no of selector
+
+       //2. dialogue()
+      // $("#div").dialog("open");
+
+
+       //3. bind
+       $("p").bind("click",{
+        mess:"Hii Ankit"
+       }
+       ,myMessage=(mes)=>
+       {
+        debugger;
+        alert(mes.data.mess);
+       })
+
+       // 1. bind method will help to bind any selector with the any events
+       // 2. bind method will take 3 parameter, 
+      // event-> form of string,
+      //data-> form of Any dataypes
+      // handler-> function and function should be arrow based
+      //3. if we will not pass any data then function will behave like a normal function 
+      //4. the passed data will set in the property of data of the handler object
+      // syntax (selector).bind(event,data,function)
+
+    })
+
+
+
+
+   
+    
+
+    
+
+
+</script>
+<body>
+
+    <!-- 
+        <p>p1</p>
+        <p>p1</p>
+        <p>p1</p>
+        <p>p1</p>
+        <p>p1</p>
+        <p>p1</p>
+        <p>p1</p>
+        <p>p1</p>
+    -->
+
+    <div id="di">
+        <h1>Hello</h1>
+    </div>
+
+    <p>Click me</p>
+    
+</body>
+</html>
