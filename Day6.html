@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        
+        $(document).ready(function()
+        {
+            //1. html() and append()
+
+            // html method will replace the existing element with 
+            //the current html element (In case of same selectors")
+           /* $("body").html("<p> hello </p>") 
+            $("body").append("<h2> Heading tag </h2>") //it will add new element with the existing element
+            $("body").append("<h6> Heading tag 6 </h6>") */
+
+
+            //2 . delay()
+            /*$("button").click(function()
+            {
+                $("#d1").delay(5000).fadeIn();  /// delay may be taken parameter in form of string(slow,fast) or time in form of millisecond
+                $("#d2").delay(7000).fadeIn();
+                $("#d2").delay(8000).fadeOut();
+                $("#d3").delay(9000).fadeIn();
+            })*/
+
+
+            $("button").click(function()
+            {
+                $.getJSON("https://dummyjson.com/carts",function(myjsondata)
+                {
+                    debugger;
+
+                   $("#myJsonData").html("<p> Produnct Id : "+myjsondata.carts[0].id+"</p>");
+                   $("#myJsonData").append("<p> Produnct Name : "+myjsondata.carts[0].products[0].title+"</p>");
+                })
+            })
+            
+        })
+
+
+
+    </script>
+</head>
+<body>
+    <button> Click</button>
+    <div id="d1" style="width: 100px;height: 100px;background-color: red;display: none">
+
+    </div>
+
+    <div id="d2" style="width: 100px;height: 100px;background-color: yellow;display: none;">
+
+    </div>
+
+    <div id="d3" style="width: 100px;height: 100px;background-color: green;display: none;">
+
+    </div>
+
+    <div id="myJsonData">
+
+    </div>
+
+    
+
+    
+</body>
+</html>
