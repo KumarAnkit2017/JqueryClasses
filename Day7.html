@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day7-(on or Live) and (off or die) /// Live and die was depricated</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<script>
+    //1. live() and die() or on or off
+    $(document).ready(function()
+    {
+        $("p").on("click",function() 
+        /// on method will be store the current status of the event action and whenever,you 
+       // perform event on slector it will start from the current states until you have not 
+       //perform any die or off event.
+        {
+            $(this).animate({
+                letterSpacing: "+=10px"
+            })
+        })
+
+        $("button").click(function()
+        {
+            $("p").off() //it will die the current status of the live or on event
+        })
+    })
+
+</script>
+<body>
+    <p>Ankit</p>
+
+    <button>click to stop font size</button>
+    
+</body>
+</html>
