@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day8</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<script>
+    
+    $(document).ready(function()
+    {
+        //1. eq() --eq() is used to assign the index number 
+        //of the selected elements, we passed an index number as a parameter ->eq(1)
+        /*$("p").eq(0).css({  
+            color :"red"
+        })*/
+
+       //1. contents() is used to select all the inner content of the starting and ending tag (selectors)
+       //2. filter() is used to select the particular contents of the selectors
+       $("#d1").contents().filter("h1").css({  
+            color :"red"
+       })
+
+       //3. wrap() - wrap is used to put the layer outside the selector
+       $("p").eq(1).wrap("<i>").wrap("<b>");
+
+    })
+    
+  //Assignment- create a p tag and create 4 button for italic,bold,color,fontsize 
+    
+</script>
+<body>
+    <p>p1</p>
+    <p>p2</p>
+
+    <div id="d1">
+        <!--ghjgjhghjgj-->
+        <p>Hello P3 Tag</p>
+        <p>Hello P4 Tag</p>
+        <p>Hello P5 Tag</p>
+        <h1>hello H1 Tag</h1>
+        <span>span</span>
+        <div id="d2">
+            <h1>hello H2222 Tag</h1>
+            <p>Hello P6 Tag inside another div</p>
+        </div>
+        <h1>hello H2 Tag</h1>
+    </div>
+
+    <h1>hello H3 Tag</h1>
+    <p>Hello p7 Tag</p>
+    
+</body>
+</html>
